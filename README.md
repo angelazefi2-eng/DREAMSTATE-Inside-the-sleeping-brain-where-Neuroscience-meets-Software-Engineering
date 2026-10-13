@@ -1,200 +1,346 @@
 # DREAMSTATE-Inside-the-Sleeping-Brain-Where-Neuroscience-Meets-Software-Engineering
 A platform for exploring and visualizing brain activity during sleep using EEG data
 
-**# DREAMSTATE — Inside the Sleeping Brain
+# DREAMSTATE — Inside the Sleeping Brain
 ### Where Neuroscience Meets Software Engineering
 
 *Çfarë ndodh brenda nesh kur mbyllim sytë dhe bota hesht?*
 
-Gjumi nuk është një gjendje pasiviteti. Ndërsa trupi pushon, truri vazhdon të prodhojë aktivitet elektrik, i cili ndryshon përgjatë fazave të ndryshme të gjumit.
+Gjumi është një proces biologjik kompleks gjatë të cilit truri vazhdon të jetë aktiv. Aktiviteti elektrik i tij ndryshon gjatë fazave të ndryshme të gjumit, duke krijuar sinjale që mund të regjistrohen, analizohen dhe studiohen.
 
-**DREAMSTATE** është një projekt kërkimor dhe edukativ që synon të eksplorojë aktivitetin e trurit gjatë gjumit përmes të dhënave EEG, analizës kompjuterike dhe vizualizimit interaktiv.
+**DREAMSTATE** është një platformë kërkimore dhe edukative që synon të eksplorojë aktivitetin e trurit gjatë gjumit përmes të dhënave EEG (*Electroencephalography*), përpunimit kompjuterik dhe vizualizimit interaktiv.
 
-Qëllimi ynë është të ndërtojmë një platformë që i shndërron regjistrimet shkencore në informacion të kuptueshëm. Përdoruesit do të mund të eksplorojnë sinjalet EEG, të shohin fazat e gjumit dhe të analizojnë statistika të ndryshme të regjistrimeve.
+Projekti synon t'i shndërrojë regjistrimet shkencore në informacion të kuptueshëm, duke u mundësuar përdoruesve të eksplorojnë sinjalet EEG, të shohin fazat e gjumit dhe të analizojnë statistikat kryesore të një regjistrimi.
 
-Projekti nuk synon të lexojë ëndrrat apo të diagnostikojë sëmundje. Ai synon të tregojë se si teknologjia mund të na ndihmojë të eksplorojmë një nga proceset më interesante të trurit njerëzor.
-
----
-
-## 1. Lidhja mes neurologjisë dhe inxhinierisë së softuerit
-
-DREAMSTATE qëndron në kryqëzimin e dy fushave: **neuroshkencës, e cila studion funksionimin e trurit, dhe inxhinierisë së softuerit, e cila na mundëson të përpunojmë, analizojmë dhe vizualizojmë të dhënat e tij.**
-
-### Neurologjia dhe neuroshkenca
-
-Për të kuptuar aktivitetin e trurit gjatë gjumit, përdoret EEG-ja (*Electroencephalography*), një metodë që regjistron aktivitetin elektrik të trurit përmes elektrodave të vendosura në skalp.
-
-Regjistrimet EEG përmbajnë sinjale që ndryshojnë me kalimin e kohës. Studiuesit mund t'i analizojnë këto sinjale për të studiuar fazat e gjumit, përfshirë zgjimin, fazat NREM dhe gjumin REM.
-
-### Inxhinieria e softuerit
-
-Nga ana tjetër, inxhinieria e softuerit siguron mjetet për ta kthyer këtë informacion në një sistem funksional. Përmes programimit mund të lexojmë skedarët e regjistrimeve, të përpunojmë sinjalet, të ruajmë rezultatet dhe t'i paraqesim ato në një ndërfaqe interaktive.
-
-Në vend që përdoruesi të përballet me skedarë teknikë dhe mijëra vlera numerike, ai do të mund të shohë grafikë, kronologji të fazave të gjumit dhe statistika të përmbledhura.
-
-### Ku takohen të dyja fushat?
-
-Pika e takimit është **përpunimi dhe interpretimi i të dhënave EEG**.
-
-Neuroshkenca na ndihmon të kuptojmë çfarë përfaqësojnë sinjalet dhe fazat e gjumit. Inxhinieria e softuerit ndërton sistemin që i lexon, i organizon, i analizon dhe i paraqet këto të dhëna.
-
-Kështu, projekti lidh një fenomen biologjik real me algoritmet, bazat e të dhënave, analizën e sinjaleve dhe zhvillimin e aplikacioneve.
+DREAMSTATE nuk synon të lexojë ëndrrat apo të diagnostikojë sëmundje. Ai synon të krijojë një urë midis kërkimit shkencor dhe teknologjisë, duke treguar se si të dhënat mbi trurin mund të bëhen të eksplorueshme përmes një aplikacioni softuerik.
 
 ---
 
-## 2. Objektivat kryesore
+## 1. The Idea — Ideja e projektit
 
-- Të eksplorojmë regjistrime EEG të gjumit nga të dhëna kërkimore publike.
-- Të lexojmë dhe përpunojmë sinjalet EEG.
-- Të vizualizojmë sinjalet në grafikë interaktivë.
-- Të paraqesim fazat e gjumit sipas anotimeve të disponueshme.
-- Të llogarisim kohëzgjatjen dhe përqindjen e fazave të ndryshme.
-- Të ruajmë dhe organizojmë të dhënat në një bazë të dhënash.
-- Të zhvillojmë një ndërfaqe të qartë dhe të lehtë për t'u përdorur.
-- Si zgjerim i mundshëm, të eksplorojmë klasifikimin automatik të fazave të gjumit përmes Machine Learning.
+DREAMSTATE bazohet në idenë se aktiviteti i trurit gjatë gjumit mund të eksplorohet përmes të dhënave dhe mjeteve kompjuterike.
 
-## 3. Si do të funksionojë sistemi?
+Përmes EEG-së, aktiviteti elektrik i trurit regjistrohet si sinjal që ndryshon me kalimin e kohës. Këto regjistrime mund të shoqërohen me anotime që identifikojnë faza të ndryshme të gjumit, si zgjimi, NREM dhe REM.
+
+Platforma do t'i paraqesë këto të dhëna në mënyrë vizuale, duke e bërë më të lehtë eksplorimin e sinjaleve dhe kuptimin e strukturës së një regjistrimi gjumi.
+
+### Objektivat kryesore
+
+- Importimi dhe eksplorimi i regjistrimeve EEG.
+- Përpunimi dhe paraqitja vizuale e sinjaleve.
+- Shfaqja e fazave të gjumit sipas anotimeve të disponueshme.
+- Llogaritja e kohëzgjatjes dhe përqindjes së fazave të gjumit.
+- Organizimi dhe ruajtja e të dhënave.
+- Ndërtimi i një ndërfaqeje interaktive.
+- Eksplorimi i klasifikimit automatik me Machine Learning si funksionalitet shtesë.
+
+---
+
+## 2. Where Neuroscience Meets Software Engineering
+
+### 🧠 Neuroscience — Kuptimi i trurit
+
+Neuroshkenca studion sistemin nervor dhe mënyrën se si funksionon truri. Në këtë projekt, fokusi është te aktiviteti cerebral gjatë gjumit.
+
+EEG-ja është një metodë që regjistron aktivitetin elektrik të trurit përmes elektrodave të vendosura në skalp. Sinjalet e regjistruara mund të analizohen për të studiuar ndryshimet që ndodhin gjatë fazave të gjumit.
+
+Kjo fushë i jep projektit bazën shkencore: çfarë përfaqësojnë të dhënat dhe pse është e rëndësishme të studiohen.
+
+### 💻 Software Engineering — Ndërtimi i sistemit
+
+Inxhinieria e softuerit ofron mjetet për t'i kthyer të dhënat shkencore në një platformë funksionale.
+
+Përmes programimit mund të lexojmë skedarët EEG, të përpunojmë sinjalet, të ruajmë rezultatet në një databazë dhe t'i paraqesim ato përmes grafikëve dhe elementeve interaktive.
+
+Kjo fushë i jep projektit strukturën teknike: si përpunohen të dhënat, si komunikojnë komponentët dhe si ndërtohet një sistem i qëndrueshëm.
+
+### 🔗 The Intersection — Pika e takimit
+
+Pika e takimit mes neuroshkencës dhe inxhinierisë së softuerit është **përpunimi, analiza dhe vizualizimi i të dhënave EEG**.
+
+Neuroshkenca ndihmon në interpretimin e aktivitetit të trurit, ndërsa teknologjia mundëson përpunimin sistematik të regjistrimeve dhe paraqitjen e rezultateve.
+
+DREAMSTATE i bashkon këto dy fusha përmes analizës së të dhënave, algoritmeve, bazave të të dhënave dhe zhvillimit të aplikacioneve.
+
+---
+
+## 3. System Architecture
+
+Arkitektura e propozuar përshkruan rrugën nga regjistrimi shkencor deri te paraqitja e rezultateve në aplikacion.
 
 ```mermaid
 flowchart TD
-    A["Regjistrimet EEG"] --> B["Importimi i të dhënave"]
-    B --> C["Përpunimi me Python"]
-    C --> D["Fazat e gjumit dhe anotimet"]
-    D --> E["Llogaritja e statistikave"]
-    E --> F["Backend Java / Spring Boot"]
-    F <--> G[("PostgreSQL")]
-    F --> H["Frontend React"]
-    H --> I["Grafikët EEG"]
-    H --> J["Kronologjia e gjumit"]
-    H --> K["Statistikat e regjistrimit"]
+    A["Public EEG Dataset"] --> B["Data Import"]
+    B --> C["Python Signal Processing"]
+    C --> D["Sleep Stages and Statistics"]
+    D --> E["Java + Spring Boot REST API"]
+    E <--> F[("PostgreSQL Database")]
+    E <--> G["React Frontend"]
+    G --> H["EEG Signal Visualization"]
+    G --> I["Sleep Stage Timeline"]
+    G --> J["Statistical Dashboard"]
 ```
 
-Diagrami paraqet rrjedhën e propozuar të të dhënave. Në versionin fillestar mund të përdorim fazat e anotuar paraprakisht në dataset, pa pasur nevojë të trajnojmë një model të inteligjencës artificiale.
+### Rrjedha e të dhënave
 
-## 4. Teknologjitë e propozuara
+1. **Data Import:** përzgjidhen dhe importohen regjistrimet EEG.
+2. **Signal Processing:** të dhënat lexohen dhe përpunohen me Python.
+3. **Sleep Stages and Statistics:** përdoren anotimet e disponueshme për të paraqitur fazat dhe për të llogaritur statistikat.
+4. **Backend API:** Java dhe Spring Boot menaxhojnë logjikën e aplikacionit dhe ofrojnë të dhënat për frontend-in.
+5. **Database:** PostgreSQL ruan informacionin që kërkon aplikacioni.
+6. **Frontend:** React paraqet sinjalet, fazat dhe statistikat në një ndërfaqe interaktive.
 
-| Teknologjia | Përdorimi |
-|---|---|
-| Java | Gjuha kryesore e backend-it |
-| Spring Boot | API-të dhe logjika e aplikacionit |
-| React | Ndërfaqja e përdoruesit |
-| Python | Përpunimi dhe analiza e sinjaleve EEG |
-| PostgreSQL | Ruajtja e të dhënave |
-| Git dhe GitHub | Versionimi dhe bashkëpunimi |
-| JUnit | Testimi i backend-it |
-| pytest | Testimi i analizës me Python |
-| Postman | Testimi i API-ve |
+Arkitektura mund të përshtatet pasi të shqyrtojmë formatin konkret të dataset-it.
 
-Teknologjitë përfundimtare do të konfirmohen gjatë fazës së projektimit.
+---
 
-## 5. Burimi i të dhënave
+## 4. Technology Stack
 
-Për analizën e sinjaleve do të shqyrtojmë një dataset publik kërkimor të regjistrimeve të gjumit, si Sleep-EDF Expanded.
+DREAMSTATE do të ndërtohet duke përdorur teknologji që bashkëpunojnë për të krijuar një platformë të plotë, nga përpunimi i sinjaleve EEG deri te vizualizimi i tyre.
 
-Ky dataset përmban regjistrime polisomnografike gjatë gjithë natës, përfshirë EEG dhe anotime të fazave të gjumit. Ai mund të na ndihmojë të ndërtojmë dhe testojmë funksionalitetet kryesore të platformës.
+| Teknologjia | Shtresa | Roli në projekt |
+|---|---|---|
+| **React** | Frontend | Ndërtimi i ndërfaqes, dashboard-it dhe elementeve interaktive |
+| **Java** | Backend | Implementimi i logjikës kryesore të aplikacionit |
+| **Spring Boot** | Backend Framework | Krijimi i REST API-ve dhe komunikimi mes komponentëve |
+| **Python** | Data Processing | Leximi, përpunimi dhe analiza e sinjaleve EEG |
+| **PostgreSQL** | Database | Ruajtja dhe organizimi i të dhënave dhe rezultateve |
+| **Git** | Version Control | Ndjekja e ndryshimeve në kod |
+| **GitHub** | Collaboration | Bashkëpunimi, menaxhimi i detyrave dhe integrimi i kodit |
+| **Postman** | API Testing | Testimi i kërkesave dhe përgjigjeve të backend-it |
+| **JUnit** | Backend Testing | Testimi automatik i komponentëve Java |
+| **pytest** | Python Testing | Testimi i skripteve të analizës së të dhënave |
 
-Përpara përdorimit do të shqyrtojmë formatin e skedarëve, strukturën e anotimeve, kushtet e përdorimit dhe madhësinë e të dhënave.
+### Si bashkëpunojnë teknologjitë?
 
-Për prototipin fillestar do të zgjedhim vetëm një numër të vogël regjistrimesh, në mënyrë që të mund të zhvillojmë dhe testojmë sistemin pa përpunuar të gjithë dataset-in.
+- **Python** përpunon të dhënat shkencore dhe përgatit rezultatet.
+- **Java + Spring Boot** menaxhojnë logjikën e aplikacionit dhe ofrojnë REST API.
+- **PostgreSQL** ruan informacionin e nevojshëm për aplikacionin.
+- **React** i paraqet rezultatet në një ndërfaqe vizuale.
+- **Git + GitHub** mundësojnë zhvillimin në grup, kontrollin e versioneve dhe shqyrtimin e ndryshimeve.
+- **JUnit, pytest dhe Postman** ndihmojnë në verifikimin e funksionimit të sistemit.
 
-## 6. Ndarja e përgjegjësive në grup
+Teknologjitë do të integrohen gradualisht, duke filluar nga funksionalitetet bazë.
 
-### Anëtari 1 — Team Leader & Backend
+---
+
+## 5. Core Features
+
+### Funksionalitetet bazë — MVP
+
+Versioni fillestar do të përqendrohet te funksionalitetet që mund të ndërtohen, testohen dhe demonstrohen brenda afatit të projektit.
+
+- **EEG Data Explorer:** zgjedhja dhe eksplorimi i regjistrimeve EEG.
+- **Signal Visualization:** paraqitja grafike e sinjalit.
+- **Sleep Stage Timeline:** vizualizimi i fazave të gjumit sipas anotimeve ekzistuese.
+- **Sleep Statistics:** llogaritja e kohëzgjatjes dhe përqindjes së fazave.
+- **Interactive Dashboard:** paraqitja e informacionit kryesor në një ndërfaqe të vetme.
+
+### Funksionalitete shtesë — Future Enhancements
+
+Nëse versioni bazë përfundon në kohë, projekti mund të zgjerohet me:
+
+- Klasifikimin automatik të fazave të gjumit përmes Machine Learning.
+- Krahasimin e regjistrimeve të ndryshme.
+- Filtrimin dhe eksplorimin më të avancuar të sinjaleve.
+- Statistika shtesë dhe vizualizime më të detajuara.
+
+Klasifikimi automatik nuk është kusht për përfundimin e versionit bazë.
+
+---
+
+## 6. Dataset and Scientific Data
+
+Për analizën e sinjaleve do të shqyrtojmë një dataset publik kërkimor që përmban regjistrime EEG gjatë gjumit, si Sleep-EDF Expanded.
+
+Një dataset i tillë mund të ofrojë sinjale dhe anotime të fazave të gjumit, duke na lejuar të zhvillojmë dhe testojmë funksionalitetet e platformës.
+
+Përpara integrimit do të verifikojmë:
+
+- Formatet dhe strukturën e skedarëve.
+- Disponueshmërinë e anotimeve të fazave të gjumit.
+- Përputhshmërinë me mjetet e përpunimit në Python.
+- Kushtet e përdorimit të të dhënave.
+- Madhësinë e dataset-it dhe burimet kompjuterike të nevojshme.
+
+Për prototipin fillestar do të përdorim një numër të kufizuar regjistrimesh. Kjo do ta bëjë zhvillimin dhe testimin më të menaxhueshëm.
+
+---
+
+## 7. Team Structure and Responsibilities
+
+Projekti do të zhvillohet nga një ekip me katër anëtarë. Ndarja fillestare e përgjegjësive do të jetë si më poshtë.
+
+### Member 1 — Team Leader & Backend Developer
+
 - Organizimi i punës dhe ndjekja e afateve.
 - Zhvillimi i backend-it me Java dhe Spring Boot.
-- Krijimi i API-ve.
+- Krijimi i REST API-ve.
 - Koordinimi dhe integrimi i komponentëve.
+- Shqyrtimi i progresit dhe shpërndarja e detyrave.
 
-### Anëtari 2 — Frontend Developer
+### Member 2 — Frontend Developer
+
 - Zhvillimi i ndërfaqes me React.
 - Ndërtimi i dashboard-it.
-- Vizualizimi i sinjaleve dhe fazave të gjumit.
+- Vizualizimi i sinjaleve EEG dhe fazave të gjumit.
 - Lidhja e frontend-it me backend-in.
+- Përmirësimi i përvojës së përdoruesit.
 
-### Anëtari 3 — EEG Data & Python
+### Member 3 — EEG Data & Python Developer
+
 - Shqyrtimi dhe përzgjedhja e regjistrimeve.
 - Leximi dhe përpunimi i sinjaleve EEG.
-- Përgatitja e të dhënave dhe llogaritja e statistikave.
+- Përgatitja e të dhënave për analizë.
+- Llogaritja e statistikave.
 - Eksplorimi i Machine Learning si zgjerim i mundshëm.
 
-### Anëtari 4 — Database, Testing & Documentation
-- Projektimi i bazës së të dhënave PostgreSQL.
+### Member 4 — Database, Testing & Documentation
+
+- Projektimi i skemës së PostgreSQL.
 - Testimi i API-ve dhe funksionaliteteve.
 - Dokumentimi i arkitekturës dhe instalimit.
-- Ndihma në integrimin dhe kontrollin e cilësisë.
+- Kontrolli i cilësisë dhe ndihma në integrim.
 
-Ndarja është orientuese. Anëtarët do të bashkëpunojnë dhe do të ndihmojnë njëri-tjetrin gjatë zhvillimit.
+Kjo ndarje është orientuese. Anëtarët do të bashkëpunojnë gjatë zhvillimit dhe përgjegjësitë mund të përshtaten sipas nevojave të projektit.
 
-## 7. Plani i punës
+---
 
-| Java | Faza | Rezultati |
+## 8. Development Roadmap
+
+Plani fillestar parashikon tetë javë pune.
+
+| Java | Faza | Rezultati i synuar |
 |---|---|---|
-| 1 | Analiza dhe planifikimi | Kërkesat, objektivat dhe ndarja e detyrave |
-| 2 | Projektimi | Arkitektura dhe skema e databazës |
-| 3 | Konfigurimi | Struktura fillestare e projektit |
-| 4 | Versioni bazë | Frontend, backend dhe databaza |
-| 5 | Përpunimi i EEG-së | Importimi dhe vizualizimi fillestar |
-| 6 | Integrimi | Komponentët komunikojnë me njëri-tjetrin |
-| 7 | Testimi | Kontrolli dhe korrigjimi i gabimeve |
-| 8 | Finalizimi | Dokumentacioni dhe prezantimi |
+| **1** | Analiza dhe planifikimi | Kërkesat, objektivat dhe ndarja e detyrave |
+| **2** | Projektimi i sistemit | Arkitektura, diagramet dhe skema e databazës |
+| **3** | Konfigurimi | Struktura e repository-t dhe mjedisi i zhvillimit |
+| **4** | Versioni bazë | Frontend, backend dhe databaza fillestare |
+| **5** | Analiza e EEG-së | Importimi, përpunimi dhe vizualizimi fillestar |
+| **6** | Integrimi | Komunikimi mes komponentëve |
+| **7** | Testimi | Identifikimi dhe korrigjimi i gabimeve |
+| **8** | Finalizimi | Dokumentacioni dhe prezantimi |
 
-Afatet mund të përshtaten sipas ecurisë së grupit.
+Afatet mund të përshtaten sipas ecurisë së grupit dhe kompleksitetit të të dhënave.
 
-## 8. Organizimi i punës në GitHub
+---
 
-Për bashkëpunimin do të përdorim:
+## 9. GitHub Workflow
 
-- **Issues** për të krijuar dhe caktuar detyrat.
-- **Branches** për të zhvilluar funksionalitete të veçanta.
-- **Pull Requests** për të shqyrtuar ndryshimet përpara integrimit.
-- **README.md** për të dokumentuar qëllimin dhe strukturën e projektit.
+Për të organizuar zhvillimin, do të përdorim GitHub si hapësirë të përbashkët për kodin dhe dokumentacionin.
 
-Statuset e detyrave do të jenë:
+### Procesi i punës
+
+```mermaid
+flowchart TD
+    A["Create Issue"] --> B["Assign Responsibility"]
+    B --> C["Create Feature Branch"]
+    C --> D["Implement Feature"]
+    D --> E["Pull Request"]
+    E --> F["Code Review and Testing"]
+    F --> G{"Ready to Merge?"}
+    G -- "No" --> D
+    G -- "Yes" --> H["Merge into main"]
+```
+
+### Rregullat e bashkëpunimit
+
+- Çdo detyrë e rëndësishme do të regjistrohet si **GitHub Issue**.
+- Çdo anëtar do të zhvillojë funksionalitetet në një branch të veçantë.
+- Ndryshimet do të shqyrtohen përmes **Pull Requests**.
+- Branch-i `main` do të mbahet sa më i qëndrueshëm.
+- Funksionalitetet do të testohen përpara integrimit.
+
+### Statuset e detyrave
 
 1. Për t'u bërë
 2. Në proces
 3. Në shqyrtim
 4. Përfunduar
 
-```mermaid
-flowchart TD
-    A["Krijimi i detyrës"] --> B["Caktimi i anëtarit"]
-    B --> C["Zhvillimi në branch"]
-    C --> D["Pull Request"]
-    D --> E["Shqyrtimi dhe testimi"]
-    E --> F{"A është gati?"}
-    F -- "Jo" --> C
-    F -- "Po" --> G["Integrimi në main"]
-```
+---
 
-## 9. Struktura e projektit
+## 10. Project Structure
+
+Struktura fillestare e repository-t do të jetë:
 
 ```text
 DREAMSTATE/
+│
 ├── frontend/
+│   └── React application
+│
 ├── backend/
+│   └── Spring Boot application
+│
 ├── analysis/
+│   └── Python EEG processing
+│
 ├── database/
+│   └── Database schema and scripts
+│
 ├── docs/
+│   └── Diagrams and project documentation
+│
 ├── tests/
+│   └── Testing resources
+│
 └── README.md
 ```
 
-- `frontend/` — ndërfaqja e përdoruesit.
-- `backend/` — aplikacioni Java dhe API-të.
-- `analysis/` — skriptet Python për përpunimin e EEG-së.
-- `database/` — skemat dhe skriptet e databazës.
-- `docs/` — diagramet, kërkesat dhe dokumentacioni.
-- `tests/` — testet e projektit.
-
-## 10. Rezultati i synuar
-
-Në fund synojmë të kemi një platformë funksionale ku përdoruesi mund të eksplorojë një regjistrim EEG, të shohë paraqitjen vizuale të sinjalit, të shqyrtojë fazat e gjumit dhe të analizojë statistikat bazë.
-
-Projekti do të demonstrojë zbatimin praktik të koncepteve të inxhinierisë së softuerit në një problem që lidhet me neuroshkencën.
-
-Prioriteti do të jetë ndërtimi i një versioni fillestar të qëndrueshëm dhe të testuar. Funksionalitete më të avancuara, si klasifikimi automatik me Machine Learning, do të merren në konsideratë pasi versioni bazë të jetë funksional.
+Çdo direktori do të përmbajë komponentët përkatës. Struktura mund të përshtatet gjatë zhvillimit, pasi të përcaktohen më mirë kërkesat teknike.
 
 ---
 
-*DREAMSTATE — Edhe kur trupi pushon, truri vazhdon të tregojë historinë e tij përmes sinjaleve.***
+## 11. Testing and Quality Assurance
+
+Testimi do të jetë pjesë e procesit të zhvillimit, jo vetëm faza e fundit.
+
+Do të synojmë të verifikojmë:
+
+- Funksionimin e endpoint-eve të backend-it.
+- Saktësinë e llogaritjeve statistikore.
+- Leximin dhe përpunimin e regjistrimeve EEG.
+- Komunikimin ndërmjet frontend-it dhe backend-it.
+- Ruajtjen dhe marrjen e të dhënave nga databaza.
+- Paraqitjen e saktë të rezultateve në ndërfaqe.
+
+Mjetet e testimit do të zgjidhen sipas komponentit: JUnit për Java, pytest për Python dhe Postman për testimin e API-ve.
+
+---
+
+## 12. Expected Deliverables
+
+Në fund të projektit synojmë të dorëzojmë:
+
+- Një aplikacion funksional për eksplorimin e të dhënave EEG.
+- Një frontend interaktiv.
+- Një backend me REST API.
+- Një bazë të dhënash të organizuar.
+- Funksionalitete për vizualizimin e sinjaleve dhe fazave të gjumit.
+- Statistika bazë për regjistrimet e përzgjedhura.
+- Teste për komponentët kryesorë.
+- Dokumentacion teknik dhe udhëzime për ekzekutimin e projektit.
+- Një prezantim që shpjegon lidhjen mes neuroshkencës dhe inxhinierisë së softuerit.
+
+---
+
+## 13. Scope and Limitations
+
+DREAMSTATE është projekt edukativ dhe kërkimor.
+
+Rezultatet do të varen nga cilësia e regjistrimeve, formati i skedarëve dhe anotimet e disponueshme. Fazat e gjumit do të paraqiten sipas anotimeve ekzistuese ose, nëse implementohet një model, sipas parashikimeve të tij të vlerësuara.
+
+Platforma nuk është pajisje mjekësore, nuk zëvendëson vlerësimin nga profesionistët shëndetësorë dhe nuk synon të diagnostikojë çrregullime të gjumit.
+
+---
+
+## 14. Final Vision
+
+DREAMSTATE synon të tregojë se si një fenomen biologjik mund të eksplorohet përmes mjeteve të inxhinierisë së softuerit.
+
+Duke kombinuar sinjalet EEG, përpunimin e të dhënave, bazat e të dhënave dhe vizualizimin interaktiv, projekti do të krijojë një pikë takimi mes neuroshkencës dhe teknologjisë.
+
+Qëllimi nuk është vetëm të ndërtojmë një aplikacion, por të kuptojmë se si njohuritë shkencore mund të shndërrohen në sisteme softuerike të dobishme, të organizuara dhe të testuara.
+
+*DREAMSTATE — Even when the body rests, the brain continues to tell its story through signals.*
